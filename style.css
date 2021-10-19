@@ -272,9 +272,18 @@ div.nav-bar a:hover{
 
 
 /* --- Skills and Projects ---*/
+
+/* skills slide card section */
 #skills-and-projects{
-    padding: 10px;
+    position: relative;
+    padding: 40px;
     min-height: 600px;
+    text-align: center;
+}
+.skills-projects-heading{
+    text-align: center;
+    font-size: 42px;
+    width: 100%;
 }
 .skills-slideshow-container{
     background-image: url("images/bg.jpg");
@@ -333,9 +342,48 @@ button:hover{
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.8);;
 }
-
-
-
+/* separator for the two sections */
+.col-separator{
+    height: 100px;
+    border-left: 10px dotted #bbb;
+    margin: 15px 50px;
+}
+/* my-projects cards section */
+.my-projects-container{
+    padding: 50px;
+}
+.projects-card-layout{
+    position: relative;
+    width: 300px;
+    height: 300px;
+}
+.projects-card-layout .overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+}
+.projects-card-layout:hover .overlay{
+    bottom: 0;
+    height: 100%;
+    border-radius: 0 0 5px 5px;
+}
+.overlay-text{
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
 /* ---- Contact Section ---- */
 #contact{
     padding: 10px 40px;
