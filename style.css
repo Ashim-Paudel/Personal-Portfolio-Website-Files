@@ -275,41 +275,48 @@ div.nav-bar a:hover{
 
 /* skills slide card section */
 #skills-and-projects{
-    position: relative;
     padding: 40px;
     min-height: 600px;
     text-align: center;
 }
+.skills-projects-flex-box{
+    margin: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
 .skills-projects-heading{
     text-align: center;
     font-size: 42px;
     width: 100%;
 }
 .skills-slideshow-container{
+    margin: 25px auto;
     background-image: url("images/bg.jpg");
     background-size: cover;
     position: relative;
     width: 270px;
     height: 270px;
-    text-align: center;
-    justify-content: center;
-    align-content: center;
     border-radius: 15px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
-.button{
-    width: 30px;
-    height: 30px;
+.skills-slideshow-container .slider-button{
+    width: 40px;
+    height: 40px;
     border: 1px solid #999;
+    font-size: 20px;
     color: white;
     background-color: rgb(0, 0, 0, .5);
     position: absolute;
     top: 50%;
 }
-.button-next-left{
+.skills-button-next-left{
     left: 0;
 }
-.button-next-right{
+.skills-button-next-right{
     right: 0;
 }
 .skills-slideshow-container > div{
@@ -338,31 +345,60 @@ div.nav-bar a:hover{
     font-weight: bold;
 }
 /* some hover effects */
-button:hover{
+.slider-button:hover{
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.8);;
 }
-/* separator for the two sections */
-.col-separator{
-    height: 100px;
-    border-left: 10px dotted #bbb;
-    margin: 15px 50px;
-}
-/* my-projects cards section */
+
+
+/* my-projects section */
 .my-projects-container{
+    position: relative;
     padding: 50px;
+    border: 1px solid;
+    margin: 25px auto;
 }
+/* styling card changer buttons */
+.my-projects-container .slider-button{
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(0,0,0,.7);
+    border-style: none;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+}
+.my-projects-container .slider-button:hover{ /* hover effect on botton*/
+    background-color: rgb(0, 0, 0);
+    width: 51px;
+    height: 51px;
+}
+.projects-button-next-left{
+    left: 0;
+}
+.projects-button-next-right{
+    right: 0;
+}
+/* cards */
 .projects-card-layout{
     position: relative;
+    margin: auto;
     width: 300px;
-    height: 300px;
+    height: 100%;
+    border: 1px solid;
+    }
+.projects-card-layout img{
 }
-.projects-card-layout .overlay {
+
+/* overlay text effects on projects felx card on hover */
+.projects-card-layout .overlay{
     position: absolute;
     bottom: 100%;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8);
     overflow: hidden;
     width: 100%;
     height:0;
@@ -371,9 +407,8 @@ button:hover{
 .projects-card-layout:hover .overlay{
     bottom: 0;
     height: 100%;
-    border-radius: 0 0 5px 5px;
 }
-.overlay-text{
+.projects-card-layout .overlay-text{
     color: white;
     font-size: 24px;
     position: absolute;

@@ -9,7 +9,7 @@
     <!-- CSS style sheet -->
     <link rel="stylesheet" type="text/css" href="style.css">
 
-    <!-- Some Google Fonts -->
+    <!-- Some Google Fonts: Sofiya, Merriweather, Montserrat, Roboto Slab -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Montserrat:wght@100;300&family=Roboto+Slab:wght@300&family=Sofia&display=swap" >
@@ -19,7 +19,7 @@
 
     <!-- Website Icon and Title -->
     <link rel="icon" href="images/icons/ashim-paudel-icon.svg">
-    <title>De' Paudel</title>
+    <title>theCuriousAshim</title>
 </head>
 
 <body>
@@ -116,72 +116,77 @@
 
     <div id="skills-and-projects" class="website-section skills-and-projects-section">
         <h2 class="skills-projects-heading">Skills and Projects</h2>
-        <div class="col-25 skills-slideshow-container">
-            <div class="skills-card">
-                <div class="logo-container"><img src="images/icons/python-language-logotype.png"></div>
-                <div class="skills-rating">Python<br>⭐⭐⭐⭐ ✩</div>
-            </div>
+        <div class="skill-projects-flex-box">
+            <div class="col-25 skills-slideshow-container">
+                <div class="skills-card">
+                    <div class="logo-container"><img src="images/icons/python-language-logotype.png"></div>
+                    <div class="skills-rating">Python<br>⭐⭐⭐⭐ ✩</div>
+                </div>
 
-            <div class="skills-card">
-                <div class="logo-container"><img src="images/icons/C-programming-language.png"></div>
-                <div class="skills-rating">C<br>⭐⭐⭐⭐ ✩</div>
-            </div>
+                <div class="skills-card">
+                    <div class="logo-container"><img src="images/icons/C-programming-language.png"></div>
+                    <div class="skills-rating">C<br>⭐⭐⭐⭐ ✩</div>
+                </div>
 
-            <div class="skills-card">
-                <div class="logo-container"><img src="images/icons/html-5.png"></div>
-                <div class="skills-rating">HTML<br>⭐⭐⭐⭐ ✩</div>
+                <div class="skills-card">
+                    <div class="logo-container"><img src="images/icons/html-5.png"></div>
+                    <div class="skills-rating">HTML<br>⭐⭐⭐⭐ ✩</div>
+                </div>
+                
+                <div class="skills-card">
+                    <div class="logo-container"><img src="images/icons/css-3.png"></div>
+                    <div class="skills-rating">CSS<br>⭐⭐⭐⭐ ✩</div>
+                </div>
+
+                <div class="skills-card">
+                    <div class="logo-container"><img src="images/icons/wordpress.png"></div>
+                    <div class="skills-rating">Wordpress<br>⭐⭐⭐ ✩ ✩</div>
+                </div>
+
+                <div class="skills-card">
+                    <div class="logo-container"><img src="images/icons/latex.png"></div>
+                    <div class="skills-rating" style="left:22%">LATEX, Markdown<br>⭐⭐⭐⭐⭐</div>
+                </div>
+
+                <button class="slider-button skills-button-next-left" onclick="plusDivs(-1, skills_card_changer)">&#10094;</button>
+                <button class="slider-button skills-button-next-right" onclick="plusDivs(+1, skills_card_changer)">&#10095;</button>
             </div>
             
-            <div class="skills-card">
-                <div class="logo-container"><img src="images/icons/css-3.png"></div>
-                <div class="skills-rating">CSS<br>⭐⭐⭐⭐ ✩</div>
+            <div class="col-separator"></div>  <!-- responsive separator line -->
+
+            <!-- Projects section -->
+            <div class="col-75 my-projects-container">
+                <div class="projects-card-layout">
+                    <img src="images/projects/password-manager.gif" style="width: 100%;">
+                    <div class="overlay">
+                        <div class="overlay-text">Password Manager</div>
+                    </div>
+                </div> 
+
+                <div class="projects-card-layout">
+                    <img src="images/icons/wordpress.png" style="width: 100%;">
+                    <div class="overlay">
+                        <div class="overlay-text">HHF- Website</div>
+                    </div>
+                </div> 
+
+                <div class="projects-card-layout">
+                    <img src="images/projects/c-sewa.png" style="width: 100%;">
+                    <div class="overlay">
+                        <div class="overlay-text">C- Sewa</div>
+                    </div>
+                </div> 
+
+                <div class="projects-card-layout">
+                    <img src="images//projects/ping-pong.gif" style="width: 100%;">
+                    <div class="overlay">
+                        <div class="overlay-text">Ping - Pong</div>
+                    </div>
+                </div> 
+
+                <button class="slider-button projects-button-next-left" onclick="plusDivs(-1, project_cards_slider)">&#10094;</button>
+                <button class="slider-button projects-button-next-right" onclick="plusDivs(+1, project_cards_slider)">&#10095;</button>
             </div>
-
-            <div class="skills-card">
-                <div class="logo-container"><img src="images/icons/wordpress.png"></div>
-                <div class="skills-rating">Wordpress<br>⭐⭐⭐ ✩ ✩</div>
-            </div>
-
-            <div class="skills-card">
-                <div class="logo-container"><img src="images/icons/latex.png"></div>
-                <div class="skills-rating" style="left:22%">LATEX, Markdown<br>⭐⭐⭐⭐⭐</div>
-            </div>
-
-            <button class="button button-next-left" onclick="plusDivs(-1, skills_card_changer)">&#10094;</button>
-            <button class="button button-next-right" onclick="plusDivs(+1, skills_card_changer)">&#10095;</button>
-        </div>
-        
-        <div class="col-separator"></div>  <!-- responsive separator line -->
-
-        <!-- Projects section -->
-        <div class="col-75 my-projects-container">
-            <div class="projects-card-layout">
-                <img src="images/projects/password-manager.gif" style="width: 100%;">
-                <div class="overlay">
-                    <div class="overlay-text">Password Manager</div>
-                </div>
-            </div> 
-            <div class="projects-card-layout">
-                <img src="images/icons/wordpress.png" style="width: 100%;">
-                <div class="overlay">
-                    <div class="overlay-text">HHF- Website</div>
-                </div>
-            </div> 
-            <div class="projects-card-layout">
-                <img src="images/projects/c-sewa.png" style="width: 100%;">
-                <div class="overlay">
-                    <div class="overlay-text">C- Sewa</div>
-                </div>
-            </div> 
-            <div class="projects-card-layout">
-                <img src="images//projects/ping-pong.gif" style="width: 100%;">
-                <div class="overlay">
-                    <div class="overlay-text">Ping - Pong</div>
-                </div>
-            </div> 
-
-            <button class="button button-next-left" onclick="plusDivs(-1, project_cards_slider)">&#10094;</button>
-            <button class="button button-next-right" onclick="plusDivs(+1, project_cards_slider)">&#10095;</button>
         </div>
     </div>
 
@@ -265,7 +270,7 @@
         myIndex++;
         if (myIndex > x.length) {myIndex = 1}    
         x[myIndex-1].style.display = "block";  
-        setTimeout(automaticslide, 2000); // Change image every 2 seconds
+        setTimeout(automaticslide, 2500); // Change image every 2.5 seconds
     }
 
     function project_cards_slider(n){
