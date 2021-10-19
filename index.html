@@ -147,8 +147,8 @@
                 <div class="skills-rating" style="left:22%">LATEX, Markdown<br>⭐⭐⭐⭐⭐</div>
             </div>
 
-            <button class="button button-next-left" onclick="plusDivs(-1)">&#10094;</button>
-            <button class="button button-next-right" onclick="plusDivs(+1)">&#10095;</button>
+            <button class="button button-next-left" onclick="plusDivs(-1, skills_card_changer)">&#10094;</button>
+            <button class="button button-next-right" onclick="plusDivs(+1, skills_card_changer)">&#10095;</button>
         </div>
         
         <div class="col-separator"></div>  <!-- responsive separator line -->
@@ -156,7 +156,7 @@
         <!-- Projects section -->
         <div class="col-75 my-projects-container">
             <div class="projects-card-layout">
-                <img src="images/password-manager.gif" style="width: 100%;">
+                <img src="images/projects/password-manager.gif" style="width: 100%;">
                 <div class="overlay">
                     <div class="overlay-text">Password Manager</div>
                 </div>
@@ -168,17 +168,20 @@
                 </div>
             </div> 
             <div class="projects-card-layout">
-                <img src="images/c-sewa.png" style="width: 100%;">
+                <img src="images/projects/c-sewa.png" style="width: 100%;">
                 <div class="overlay">
                     <div class="overlay-text">C- Sewa</div>
                 </div>
             </div> 
             <div class="projects-card-layout">
-                <img src="images/password-manager.gif" style="width: 100%;">
+                <img src="images//projects/ping-pong.gif" style="width: 100%;">
                 <div class="overlay">
                     <div class="overlay-text">Ping - Pong</div>
                 </div>
             </div> 
+
+            <button class="button button-next-left" onclick="plusDivs(-1, project_cards_slider)">&#10094;</button>
+            <button class="button button-next-right" onclick="plusDivs(+1, project_cards_slider)">&#10095;</button>
         </div>
     </div>
 
@@ -221,10 +224,12 @@
 
 
 <script>
-    var slideIndex = 1;
+    var SkillSlideIndex = 1;
+    var ProjectSlideIndex = 1;
     var myIndex = 0;
     automaticslide();       // infinitely running functions
-    showDivs(slideIndex);   
+    skills_card_changer(SkillSlideIndex);   
+    project_cards_slider(ProjectSlideIndex);
 
     function expand_nav_bar() {     // this will run on click to expand nav-bar
         var x = document.getElementById("my-navbar");
@@ -236,19 +241,19 @@
         }
     }
     
-    function plusDivs(n) {
-            showDivs(slideIndex += n);
+    function plusDivs(n, func) {
+            func(SkillSlideIndex += n);
     }
 
-    function showDivs(n) { // for manual changing of slides
+    function skills_card_changer(n) { // for manual changing of slides of skills section
         var i;
         var x = document.getElementsByClassName("skills-card");
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length}
+        if (n > x.length) {SkillSlideIndex = 1}
+        if (n < 1) {SkillSlideIndex = x.length}
         for (i = 0; i < x.length; i++) {
         x[i].style.display = "none";  
         }
-        x[slideIndex-1].style.display = "block";  
+        x[SkillSlideIndex-1].style.display = "block";  
     }
 
     function automaticslide() {
@@ -261,6 +266,17 @@
         if (myIndex > x.length) {myIndex = 1}    
         x[myIndex-1].style.display = "block";  
         setTimeout(automaticslide, 2000); // Change image every 2 seconds
+    }
+
+    function project_cards_slider(n){
+        var i;
+        var x = document.getElementsByClassName("projects-card-layout");
+        if (n > x.length) {SkillSlideIndex = 1}
+        if (n < 1) {SkillSlideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+        }
+        x[SkillSlideIndex-1].style.display = "block";  
     }
 
 </script>
