@@ -125,6 +125,7 @@ div.nav-bar a:hover{
 @media (max-width:600px){
     #ashim-paudel-container .content{
         top: 48%;
+        min-height: 100%;
     }
 }
 
@@ -261,6 +262,7 @@ div.nav-bar a:hover{
     transform: translate(-50%, -50%);
     text-align: center;
 }
+
 /* some hover effects */
 .hobby-details-container-flexbox > div:hover{
     background-size: cover;
@@ -287,7 +289,6 @@ div.nav-bar a:hover{
     align-items: center;
 }
 
-
 .skills-projects-heading{
     text-align: center;
     font-size: 42px;
@@ -309,7 +310,7 @@ div.nav-bar a:hover{
     border: 1px solid #999;
     font-size: 20px;
     color: white;
-    background-color: rgb(0, 0, 0, .5);
+    background-color: #00000080;
     position: absolute;
     top: 50%;
 }
