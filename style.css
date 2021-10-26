@@ -289,19 +289,18 @@ div.nav-bar a:hover{
 }
 
 .skills-projects-heading{
-    text-align: center;
-    font-size: 42px;
-    width: 100%;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.skills-head-card-container{
+    margin: auto;
 }
 .skills-slideshow-container{
-    margin: 25px auto;
-    background-image: url("images/bg.jpg");
-    background-size: cover;
     position: relative;
-    width: 270px;
-    height: 270px;
     border-radius: 15px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
+
 }
 .skills-slideshow-container .slider-button{
     width: 50px;
@@ -322,6 +321,8 @@ div.nav-bar a:hover{
     right: 0;
 }
 .skills-slideshow-container > div{
+    background-image: url("images/bg.jpg");
+    background-size: cover;
     border: 1px solid #aaa;
     border-radius: 15px;
     width: 270px;
@@ -329,6 +330,7 @@ div.nav-bar a:hover{
     margin: auto;
     padding: 10px;
     text-align: center;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); 
 }
 .skills-card{
     position: relative;

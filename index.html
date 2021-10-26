@@ -114,10 +114,13 @@
         </div>
     </div>
 
+
+
     <div id="skills-and-projects" class="website-section skills-and-projects-section">
-        <h2 class="skills-projects-heading">Skills and Projects</h2>
-        <div class="skills-projects-flex-box">
-            <div class="col-25 skills-slideshow-container">
+        <div class="skills-projects-flex-box">       
+            <div class="skills-head-card-container">
+                <div class="skills-projects-heading skills-text">Skills</div> 
+                <div class="col-25 skills-slideshow-container">
                 <div class="skills-card">
                     <div class="logo-container"><img src="images/icons/python-language-logotype.png"></div>
                     <div class="skills-rating">Python<br>⭐⭐⭐⭐ ✩</div>
@@ -151,11 +154,14 @@
                 <button class="slider-button skills-button-next-left" onclick="plusDivs(-1, skills_card_changer)">&#10094;</button>
                 <button class="slider-button skills-button-next-right" onclick="plusDivs(+1, skills_card_changer)">&#10095;</button>
             </div>
+            </div>   
+                
             
             <div class="col-separator"></div>  <!-- responsive separator line -->
 
             <!-- Projects section -->
             <div class="col-75 my-projects-container">
+                <div class="skills-projects-heading projects-text">Projects</div>
                 <div class="projects-card-layout">
                     <div class="projects-img-container"><img src="images/projects/password-manager.gif" style="width: 100%;"></div>
                     <div class="projects-name-container">Password Manager</div>
@@ -201,11 +207,20 @@
                     <div class="projects-name-container">BMI- Calculator</div>
                     <div class="overlay">
                         <div class="overlay-text">Tkinter GUI based<br> Body Mass Index calculator.
-                            <a href="https://github.com/Ashim-Paudel/BMI-calculator">View code <i class="fas fa-code"></i></a>
+                            <a href="https://github.com/Ashim-Paudel/BMI-calculator" target="_blank">View code <i class="fas fa-code"></i></a>
                         </div>
                     </div>
                 </div> 
 
+                <div class="projects-card-layout">
+                    <div class="projects-img-container"><img src="images//projects/bmi-img.png" style="width: 100%;"></div>
+                    <div class="projects-name-container">Snake Game</div>
+                    <div class="overlay">
+                        <div class="overlay-text">Snake game built on python.
+                            <a href="https://github.com/Ashim-Paudel/snake_game" target="_blank">View code <i class="fas fa-code"></i></a>
+                        </div>
+                    </div>
+                </div> 
                 <button class="slider-button projects-button-next-left" onclick="plusDivs(-1, project_cards_slider)">&#10094;</button>
                 <button class="slider-button projects-button-next-right" onclick="plusDivs(+1, project_cards_slider)">&#10095;</button>
             </div>
