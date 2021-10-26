@@ -291,7 +291,7 @@ div.nav-bar a:hover{
 .skills-projects-heading{
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 
 .skills-head-card-container{
@@ -300,7 +300,6 @@ div.nav-bar a:hover{
 .skills-slideshow-container{
     position: relative;
     border-radius: 15px;
-
 }
 .skills-slideshow-container .slider-button{
     width: 50px;
@@ -308,11 +307,10 @@ div.nav-bar a:hover{
     border: 1px solid #999;
     font-size: 20px;
     color: white;
-    background-color: #00000080;
+    background-color: rgb(0,0,0,0.5);
     position: absolute;
     top: 50%;
     border-radius: 50%;
-
 }
 .skills-button-next-left{
     left: 0;
