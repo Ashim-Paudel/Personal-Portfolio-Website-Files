@@ -26,7 +26,15 @@
     <!-- Navigation Bar Container -->
     <div id="my-navbar" class="nav-bar" >
         <a href="#"><i class="fab fa-asymmetrik"></i>Ashim Paudel</a>
-        <a href="#education">About Me</a>
+        <div class="dropdown">
+            <button class="dropbtn">About Me
+              <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="#education">Education</a>
+              <a href="#hobbies-and-interests">Hobbies and Interests</a>
+            </div>
+        </div> 
         <a href="#skills-and-projects">My Projects</a>
         <a href="#contact">Contact</a>
         <a href="javascript:void(0);" class="navbar-expand-icon" onclick="expand_nav_bar()">

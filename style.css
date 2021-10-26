@@ -15,6 +15,7 @@ body{
     margin: 0;
     background-color: rgb(255, 255, 255);
     font-family: 'Roboto Slab', serif;
+    text-align: center;
     /* 
     To use all embedded google fonts:
 
@@ -29,7 +30,6 @@ body{
 
 /* Navigation bar styles */
 div.nav-bar{
-    overflow: hidden;
     position: fixed;
     top: 0;
     background-color: rgb(29, 29, 29);
@@ -42,21 +42,61 @@ div.nav-bar a{
     display: block;
     color: white;
     text-decoration: none;
-    text-align: center;
     font-family: serif;
     padding: 20px 10px;
 }
 
-div.nav-bar a:hover{
-    background-color: rgb(0, 0, 0);
+.dropdown {
+    float: left;
+    overflow: hidden;
+    background-color: inherit;
+}
+  
+.dropdown .dropbtn{  
+    font-size: 15px;
+    color: white;
+    border: none;
+    outline: none;
+    background-color: inherit;
+    margin: 0;
+    padding: 20px 10px;
+}
+  
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(92, 92, 92, .5);
+    min-width: 160px;
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.9); 
+    z-index: 1;
+  }
+  
+.dropdown-content a {
+    clear: both;
+    width: 100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
+div.nav-bar a:hover, .dropdown:hover .dropbtn{
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown .dropdown-content a:hover{
+    background-color: rgb(34, 33, 33);
+}
 .navbar-expand-icon{
     visibility: hidden;
 }
 
-@media screen and (max-width: 600px) {
-    .nav-bar a:not(:first-child) {display: none;}
+@media screen and (max-width: 600px) { /* responsive but state when expand nav-bar button is not clicked */
+    .nav-bar a:not(:first-child),.nav-bar .dropdown .dropbtn{display: none;}
     .nav-bar a.navbar-expand-icon {
       float: right;
       display: block;
@@ -77,7 +117,16 @@ div.nav-bar a:hover{
       display: block;
       text-align: left;
     }
+    .nav-bar.responsive .dropdown {float: none;}
+    .nav-bar.responsive .dropdown-content {position: relative;}
+    .nav-bar.responsive .dropdown .dropbtn {
+      display: block;
+      width: 100%;
+      text-align: left;
+    }
+    .nav-bar.responsive .dropdown-content a{width:100%;}
 }
+
 /* navigation bar Ashim icon */
 .fa-asymmetrik{
     color:white; 
