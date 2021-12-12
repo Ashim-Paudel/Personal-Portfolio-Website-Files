@@ -137,7 +137,7 @@ div.nav-bar a:hover, .dropdown:hover .dropbtn{
 
 /* About me */
 #ashim-paudel-container{
-    min-height: 750px;
+    min-height: 100vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/hope.jpg");
     background-position: center;
     background-repeat: no-repeat;
