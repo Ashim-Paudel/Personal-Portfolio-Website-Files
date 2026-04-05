@@ -1,0 +1,43 @@
+name: Sync to Public Portfolio
+on:
+  push:
+    branches:
+      - main  # Runs every time you push to your private main branch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Private Repo
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - name: Prepare Files for Public
+        run: |
+          # Create a temporary folder for the public files
+          mkdir public_build
+          # Copy everything to the temporary folder
+          cp -r ./* public_build/
+
+          # REMOVE the secret folder before it ever touches the public repo
+          rm -rf public_build/birthday
+
+          # List any specific secret files
+          rm -rf public_build/MYTOKEN.txt
+
+          # Remove the .github folder so the action doesn't loop itself
+          rm -rf public_build/.github
+
+
+
+      - name: Push to Public Repo
+        uses: cpina/github-action-push-to-another-repository@main
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+        with:
+          source-directory: 'public_build'
+          destination-github-username: 'Ashim-Paudel'
+          destination-repository-name: 'ashimp.github.io'
+          user-email: 'paudelashim111@gmail.com' # Use your GitHub email
+          target-branch: 'main'
