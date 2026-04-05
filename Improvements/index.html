@@ -283,37 +283,99 @@
   <section id="projects">
     <div class="section-label reveal">Portfolio</div>
     <h2 class="section-title reveal">Things I've<br>Built.</h2>
-    <p class="section-sub reveal">Engineering tools, games, web apps — projects born out of curiosity and necessity.</p>
+    <p class="section-sub reveal">Built to solve. Shared to contribute.</p>
 
     <div class="projects-filter reveal">
       <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="structural-design">Structural Design</button>
       <button class="filter-btn" data-filter="python">Python</button>
+      <button class="filter-btn" data-filter="opensources">OpenSource Projects</button>
       <button class="filter-btn" data-filter="web">Web</button>
-      <button class="filter-btn" data-filter="engineering">Engineering</button>
+      <button class="filter-btn" data-filter="c">C</button>
     </div>
 
     <div class="projects-grid">
-      <div class="project-card reveal" data-cat="python engineering">
-        <div class="project-thumb proj-color-1">🏗️</div>
+
+      <div class="project-card reveal" data-cat="structural-design">
+        <div class="project-thumb proj-color-1">🏥</div>
         <div class="project-body">
-          <div class="project-type">Engineering Tool</div>
-          <div class="project-name">Beam Frame Library</div>
-          <div class="project-desc">Open-source Python library for structural beam and frame analysis — compute reactions, shear force, bending moments and more.</div>
+          <div class="project-header">
+            <div class="project-type">Final Year Project · Seismic Design</div>
+            <span class="project-status completed">Completed</span>
+          </div>
+          <div class="project-name">Hospital Building Design</div>
+          <div class="project-desc">Multi-storey RCC SMRF hospital — full structural design and analysis compliant with NBC 105:2020 and IS 875:1987.</div>
           <div class="project-footer">
-            <span class="project-lang">Python</span>
+            <span class="project-lang">ETABS · AutoCAD</span>
             <div class="project-links">
-              <a href="https://github.com/Ashim-Paudel/Python-Beam-Analysis" target="_blank" title="View Code"><i class="fab fa-github"></i></a>
+              <a href="#contact" title="Available on request"><i class="fas fa-file-alt"></i></a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="python">
-        <div class="project-thumb proj-color-2">🔐</div>
+      <div class="project-card reveal" data-cat="structural-design">
+        <div class="project-thumb proj-color-2">🏠</div>
         <div class="project-body">
-          <div class="project-type">Security Tool</div>
+          <div class="project-header">
+            <div class="project-type">Structural Design</div>
+            <span class="project-status ongoing">Ongoing</span>
+          </div>
+          <div class="project-name">Residential Building Design</div>
+          <div class="project-desc">Detailed design and estimation of a 2.5 storey residential building for a client based in Australia.</div>
+          <div class="project-footer">
+            <span class="project-lang">ETABS · AutoCAD</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="python engineering opensources">
+        <div class="project-thumb proj-color-3">🏗️</div>
+        <div class="project-body">
+          <div class="project-header">
+            <div class="project-type">Engineering Tool · Open Source</div>
+            <span class="project-status completed">Completed</span>
+          </div>
+          <div class="project-name">Beam Analysis Package</div>
+          <div class="project-desc">Python library for static analysis of 2D beams — shear force, bending moments, deflections and reactions.</div>
+          <div class="project-footer">
+            <span class="project-lang">Python · NumPy</span>
+            <div class="project-links">
+              <span class="project-stars"><i class="fas fa-star"></i> <span class="stars-beam">14</span></span>
+              <a href="https://github.com/Ashim-Paudel/Python-Beam-Analysis" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="python engineering opensources">
+        <div class="project-thumb proj-color-4">🌊</div>
+        <div class="project-body">
+          <div class="project-header">
+            <div class="project-type">Seismic Simulation · Open Source</div>
+            <span class="project-status completed">Completed</span>
+          </div>
+          <div class="project-name">OpenSees Resources</div>
+          <div class="project-desc">Beginner-friendly Jupyter notebooks for OpenSeesPy — fiber sections, moment-curvature, and seismic structural response.</div>
+          <div class="project-footer">
+            <span class="project-lang">Python · OpenSeesPy</span>
+            <div class="project-links">
+              <span class="project-stars"><i class="fas fa-star"></i> <span class="stars-opensees">20</span></span>
+              <a href="https://github.com/Ashim-Paudel/OpenSees-Resources-for-Beginners" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="python opensources">
+        <div class="project-thumb proj-color-5">🔐</div>
+        <div class="project-body">
+          <div class="project-header">
+            <div class="project-type">Security Tool</div>
+            <span class="project-status completed">Completed</span>
+          </div>
           <div class="project-name">Password Manager</div>
-          <div class="project-desc">A CLI-based password manager with encrypted storage, built entirely in Python. Store and retrieve credentials securely.</div>
+          <div class="project-desc">CLI-based password manager with encrypted storage built entirely in Python.</div>
           <div class="project-footer">
             <span class="project-lang">Python</span>
             <div class="project-links">
@@ -323,12 +385,34 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="web">
-        <div class="project-thumb proj-color-3">🌐</div>
+      <div class="project-card reveal" data-cat="web opensources">
+        <div class="project-thumb proj-color-1">💻</div>
         <div class="project-body">
-          <div class="project-type">Web · WordPress</div>
+          <div class="project-header">
+            <div class="project-type">Web · Zero AI USE · Stack Overflow</div>
+            <span class="project-status archived">Archived</span>
+          </div>
+          <div class="project-name">First Portfolio Website</div>
+          <div class="project-desc">Built from scratch in 2021 — pure HTML, CSS & JS, zero frameworks, zero AI assistance. My first step into web development.</div>
+          <div class="project-footer">
+            <span class="project-lang">HTML · CSS · JS</span>
+            <div class="project-links">
+              <a href="https://ashim-paudel.github.io" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+              <a href="https://github.com/Ashim-Paudel" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-card reveal" data-cat="web">
+        <div class="project-thumb proj-color-6">🌐</div>
+        <div class="project-body">
+          <div class="project-header">
+            <div class="project-type">Web · WordPress</div>
+            <span class="project-status completed">Completed</span>
+          </div>
           <div class="project-name">HHF Website</div>
-          <div class="project-desc">Designed and built a full organisational website on WordPress with custom theming, pages, and content management setup.</div>
+          <div class="project-desc">Full organisational website on WordPress with custom theming and content management.</div>
           <div class="project-footer">
             <span class="project-lang">WordPress</span>
             <div class="project-links">
@@ -338,12 +422,15 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="python">
-        <div class="project-thumb proj-color-4">💰</div>
+      <div class="project-card reveal" data-cat="c opensources">
+        <div class="project-thumb proj-color-2">💰</div>
         <div class="project-body">
-          <div class="project-type">College Project · C</div>
+          <div class="project-header">
+            <div class="project-type">College Project · C</div>
+            <span class="project-status completed">Completed</span>
+          </div>
           <div class="project-name">C-Sewa</div>
-          <div class="project-desc">eSewa payment gateway prototype built in C — a college project demonstrating financial transaction flows using C data structures.</div>
+          <div class="project-desc">eSewa payment gateway prototype in C — demonstrates financial transaction flows using C data structures.</div>
           <div class="project-footer">
             <span class="project-lang">C Language</span>
             <div class="project-links">
@@ -353,95 +440,6 @@
         </div>
       </div>
 
-      <div class="project-card reveal" data-cat="python">
-        <div class="project-thumb proj-color-5">🏓</div>
-        <div class="project-body">
-          <div class="project-type">Game · GUI</div>
-          <div class="project-name">Ping Pong</div>
-          <div class="project-desc">Two-player GUI Ping-Pong game built with Python's Tkinter — smooth paddle control, ball physics, and score tracking.</div>
-          <div class="project-footer">
-            <span class="project-lang">Python / Tkinter</span>
-            <div class="project-links">
-              <a href="https://github.com/Ashim-Paudel/Ping-Pong" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal" data-cat="python">
-        <div class="project-thumb proj-color-6">🐍</div>
-        <div class="project-body">
-          <div class="project-type">Game · GUI</div>
-          <div class="project-name">Snake Game</div>
-          <div class="project-desc">Classic snake game implemented in Python with increasing difficulty, score counter, and game-over detection.</div>
-          <div class="project-footer">
-            <span class="project-lang">Python / Tkinter</span>
-            <div class="project-links">
-              <a href="https://github.com/Ashim-Paudel/snake_game" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card reveal" data-cat="python">
-        <div class="project-thumb proj-color-1">⚖️</div>
-        <div class="project-body">
-          <div class="project-type">Utility · GUI</div>
-          <div class="project-name">BMI Calculator</div>
-          <div class="project-desc">Tkinter-based Body Mass Index calculator with a clean GUI, real-time calculation, and BMI category display.</div>
-          <div class="project-footer">
-            <span class="project-lang">Python / Tkinter</span>
-            <div class="project-links">
-              <a href="https://github.com/Ashim-Paudel/BMI-calculator" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========== EXPERIENCE ========== -->
-  <section id="experience">
-    <div class="section-label reveal">Background</div>
-    <h2 class="section-title reveal">Experience &<br>Research.</h2>
-    <p class="section-sub reveal">Where academia meets application.</p>
-
-    <div class="exp-grid">
-      <div class="exp-card reveal">
-        <div>
-          <div class="exp-org">IOE Pulchowk Campus</div>
-          <div class="exp-role">B.E. Civil Engineering Graduate</div>
-          <div class="exp-desc">Four years of intensive study in structural engineering, hydraulics, geotechnics, transportation, and surveying. Developed and published engineering-focused open-source tools alongside coursework.</div>
-        </div>
-        <div class="exp-period">2020 — 2024</div>
-      </div>
-
-      <div class="exp-card reveal">
-        <div>
-          <div class="exp-org">Open Source</div>
-          <div class="exp-role">Python Beam Analysis — Library Author</div>
-          <div class="exp-desc">Designed and published a Python library for structural beam and frame analysis on GitHub. Computes reactions, shear force diagrams, bending moment diagrams, and deflections for various loading conditions.</div>
-        </div>
-        <div class="exp-period">2021 — Present</div>
-      </div>
-
-      <div class="exp-card reveal">
-        <div>
-          <div class="exp-org">Academic Research</div>
-          <div class="exp-role">Research Work (Ongoing)</div>
-          <div class="exp-desc">Actively contributing to research in civil engineering applications. Details of ongoing research and published works will be updated here as they become available.</div>
-        </div>
-        <div class="exp-period">2022 — Present</div>
-      </div>
-
-      <div class="exp-card reveal">
-        <div>
-          <div class="exp-org">Freelance / Personal</div>
-          <div class="exp-role">Web Developer & Designer</div>
-          <div class="exp-desc">Built websites and web tools for personal and organisational use — from custom HTML/CSS portfolio sites to WordPress setups.</div>
-        </div>
-        <div class="exp-period">2021 — Present</div>
-      </div>
     </div>
   </section>
 
@@ -555,7 +553,7 @@
             <div class="ch-icon ch-red"><i class="fas fa-envelope"></i></div>
             <div>
               <div class="ch-label">Email</div>
-              <div class="ch-value">paudelashim111@gmail.com</div>
+              <div class="ch-value">paudelashim111[at]gmail.com</div>
             </div>
           </a>
           <a href="tel:9862548802" class="contact-channel">
@@ -565,7 +563,7 @@
               <div class="ch-value">+977 9862548802</div>
             </div>
           </a>
-          <a href="https://github.com/Ashim-Paudel" target="_blank" class="contact-channel">
+          <!-- <a href="https://github.com/Ashim-Paudel" target="_blank" class="contact-channel">
             <div class="ch-icon ch-cyan"><i class="fab fa-github"></i></div>
             <div>
               <div class="ch-label">GitHub</div>
@@ -578,7 +576,7 @@
               <div class="ch-label">LinkedIn</div>
               <div class="ch-value">Ashim Paudel</div>
             </div>
-          </a>
+          </a> -->
         </div>
       </div>
 

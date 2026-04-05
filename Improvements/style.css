@@ -808,9 +808,10 @@ section {
 }
 .project-card:hover {
   transform: translateY(-6px);
-  border-color: rgba(255, 60, 95, 0.3);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(255, 60, 95, 0.1);
+  border-color: rgba(45, 212, 191, 0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(45, 212, 191, 0.1);
 }
+
 .project-card[data-hidden="true"] { display: none; }
 
 .project-thumb {
@@ -842,7 +843,7 @@ section {
 .project-type {
   font-family: var(--font-mono);
   font-size: 0.65rem;
-  color: var(--text-mute);
+  color: var(--text-dim);
   letter-spacing: 0.12em;
   text-transform: uppercase;
   margin-bottom: 8px;
@@ -879,6 +880,33 @@ section {
   transition: color 0.2s;
 }
 .project-links a:hover { color: var(--accent1); }
+
+.project-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.project-status {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  padding: 3px 10px;
+  border-radius: 100px;
+  white-space: nowrap;
+}
+.project-status.ongoing  { background: rgba(45,212,191,0.12); color: var(--accent1); border: 1px solid rgba(45,212,191,0.2); }
+.project-status.completed { background: rgba(56,189,248,0.12); color: var(--accent2); border: 1px solid rgba(56,189,248,0.2); }
+.project-status.archived  { background: rgba(129,140,248,0.12); color: var(--accent3); border: 1px solid rgba(129,140,248,0.2); }
+
+.project-stars {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent2);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
 
 /* =============================================
    EXPERIENCE

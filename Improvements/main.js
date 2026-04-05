@@ -147,7 +147,7 @@ filterButtons.forEach(btn => {
     // Show / hide cards
     projectCards.forEach(card => {
       const cats = card.getAttribute('data-cat') || '';
-      const visible = filter === 'all' || cats.includes(filter);
+      const visible = filter === 'all' || cats.split(' ').includes(filter);
       card.setAttribute('data-hidden', visible ? 'false' : 'true');
       card.style.display = visible ? '' : 'none';
     });
@@ -206,3 +206,28 @@ function renderTerminal() {
 }
 
 renderTerminal();
+
+// =============================================
+// GITHUB STARS — dynamic fetch
+// =============================================
+const GITHUB_REPOS = [
+  { selector: '.stars-beam',    repo: 'Ashim-Paudel/Python-Beam-Analysis' },
+  { selector: '.stars-opensees', repo: 'Ashim-Paudel/OpenSees-Resources-for-Beginners' },
+];
+
+async function fetchGithubStars() {
+  for (const item of GITHUB_REPOS) {
+    try {
+      const res  = await fetch(`https://api.github.com/repos/${item.repo}`);
+      const data = await res.json();
+      const el   = document.querySelector(item.selector);
+      if (el && data.stargazers_count !== undefined) {
+        el.textContent = data.stargazers_count;
+      }
+    } catch (e) {
+      // silently fail — static number stays as fallback
+    }
+  }
+}
+
+fetchGithubStars();
