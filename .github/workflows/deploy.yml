@@ -2,7 +2,7 @@ name: Sync to Public Portfolio
 on:
   push:
     branches:
-      - main  # Runs every time you push to your private main branch
+      - master  # Runs every time you push to your private master branch
 
 jobs:
   deploy:
