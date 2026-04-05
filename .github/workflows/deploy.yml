@@ -40,4 +40,4 @@ jobs:
           destination-github-username: 'Ashim-Paudel'
           destination-repository-name: 'ashimp.github.io'
           user-email: 'paudelashim111@gmail.com' # Use your GitHub email
-          target-branch: 'main'
+          target-branch: 'master'
