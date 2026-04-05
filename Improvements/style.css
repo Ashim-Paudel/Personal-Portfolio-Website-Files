@@ -12,8 +12,8 @@
   --accent3: #818cf8;  /* soft violet */
   --accent4: #34d399;  /* emerald */
   --text:      #f0f0f5;
-  --text-dim:  #8888aa;
-  --text-mute: #44445a;
+  --text-dim:  #b0b0cc;
+  --text-mute: #7878a0;
   --radius:    12px;
   --radius-lg: 20px;
   --font-head: 'Plus Jakarta Sans', sans-serif;
@@ -33,12 +33,16 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--bg);
+  background-color: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
   font-size: 16px;
   line-height: 1.7;
   overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(45, 212, 191, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(45, 212, 191, 0.05) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 ::selection {
@@ -251,7 +255,7 @@ section {
   overflow: hidden;
 }
 
-.hero-grid-bg {
+/* .hero-grid-bg {
   position: absolute;
   inset: 0;
   background-image:
@@ -259,7 +263,7 @@ section {
     linear-gradient(90deg, rgba(45, 212, 191, 0.03) 1px, transparent 1px);
   background-size: 60px 60px;
   pointer-events: none;
-}
+} */
 
 .hero-blob {
   position: absolute;
@@ -659,7 +663,7 @@ section {
 .skills-rings-label {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--text-mute);
+  color: var(--text-dim);
   letter-spacing: 0.1em;
   text-transform: uppercase;
   margin-bottom: 24px;
@@ -739,7 +743,7 @@ section {
   font-family: var(--font-mono);
   font-size: 0.7rem;
   letter-spacing: 0.12em;
-  color: var(--text-mute);
+  color: var(--text-dim);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
@@ -754,11 +758,10 @@ section {
   transition: transform 0.2s;
 }
 .tool-tag:hover { transform: scale(1.04); }
-.tool-tag.red    { background: rgba(255, 60, 95, 0.12);  color: var(--accent1); border: 1px solid rgba(255, 60, 95, 0.2); }
-.tool-tag.yellow { background: rgba(255, 204, 0, 0.12);  color: var(--accent2); border: 1px solid rgba(255, 204, 0, 0.2); }
-.tool-tag.cyan   { background: rgba(0, 229, 255, 0.12);  color: var(--accent3); border: 1px solid rgba(0, 229, 255, 0.2); }
-.tool-tag.violet { background: rgba(124, 58, 237, 0.12); color: #a78bfa;        border: 1px solid rgba(124, 58, 237, 0.2); }
-
+.tool-tag.cyan   { background: rgba(45, 212, 191, 0.10); color: var(--accent1); border: 1px solid rgba(45, 212, 191, 0.2); }
+.tool-tag.teal   { background: rgba(56, 189, 248, 0.10); color: var(--accent2); border: 1px solid rgba(56, 189, 248, 0.2); }
+.tool-tag.blue   { background: rgba(129, 140, 248, 0.10); color: var(--accent3); border: 1px solid rgba(129, 140, 248, 0.2); }
+.tool-tag.violet { background: rgba(124, 58, 237, 0.10); color: #a78bfa;        border: 1px solid rgba(124, 58, 237, 0.2); }
 /* =============================================
    PROJECTS
 ============================================= */

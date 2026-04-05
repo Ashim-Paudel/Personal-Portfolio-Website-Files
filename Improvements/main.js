@@ -63,12 +63,12 @@ document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 // 4. SKILL RINGS — build + animate on scroll
 // =============================================
 const SKILLS = [
-  { label: 'Python',   pct: 88, color: '#ff3c5f' },
-  { label: 'AutoCAD',  pct: 85, color: '#ffcc00' },
-  { label: 'C',        pct: 82, color: '#00e5ff' },
-  { label: 'HTML/CSS', pct: 80, color: '#7c3aed' },
-  { label: 'LaTeX',    pct: 92, color: '#ff3c5f' },
-  { label: 'WP / JS',  pct: 70, color: '#ffcc00' },
+  { label: 'Python',    pct: 95, color: '#2dd4bf' },
+  { label: 'OpenSees',  pct: 80, color: '#38bdf8' },
+  { label: 'ETABS',     pct: 95, color: '#2dd4bf' },
+  { label: 'MS Office', pct: 85, color: '#818cf8' },
+  { label: 'AutoCAD',   pct: 95, color: '#38bdf8' },
+  { label: 'LaTeX',     pct: 99, color: '#2dd4bf' },
 ];
 
 const CIRCUMFERENCE = 2 * Math.PI * 36; // r = 36 → ≈ 226.19
