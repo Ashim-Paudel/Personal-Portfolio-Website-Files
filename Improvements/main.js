@@ -153,3 +153,56 @@ filterButtons.forEach(btn => {
     });
   });
 });
+
+// =============================================
+// TERMINAL ANIMATION
+// =============================================
+const terminalLines = [
+  { prompt: '$ ', text: 'ashim --whoami', delay: 400 },
+  { prompt: '',   text: '', delay: 200 },
+  { prompt: '',   key: 'Name        ', val: ': Ashim Paudel', delay: 100 },
+  { prompt: '',   key: 'Degree      ', val: ': B.E. Civil Engineering, IOE', delay: 100 },
+  { prompt: '',   key: 'Aggregate   ', val: ': 84.60% — Rank 6', delay: 100 },
+  { prompt: '',   key: 'PSC Federal ', val: ': Rank #1 (2026)', delay: 100 },
+  { prompt: '',   key: 'PSC Gandaki ', val: ': Rank #1 (2026)', delay: 100 },
+  { prompt: '',   text: '', delay: 200 },
+  { prompt: '$ ', text: 'ashim --skills', delay: 400 },
+  { prompt: '',   text: '', delay: 200 },
+  { prompt: '',   key: 'Engineering ', val: ': ETABS, OpenSees, Plaxis, Autocad', delay: 100 },
+  { prompt: '',   key: 'Programming ', val: ': Python, C, HTML/CSS', delay: 100 },
+  { prompt: '',   key: 'Passions    ', val: ': Structures, Code, Community', delay: 100 },
+  { prompt: '',   text: '', delay: 300 },
+  { prompt: '$ ', text: '█', delay: 0, cursor: true },
+];
+
+function renderTerminal() {
+  const body = document.getElementById('terminalBody');
+  if (!body) return;
+
+  let i = 0;
+
+  function addLine() {
+    if (i >= terminalLines.length) return;
+    const item = terminalLines[i];
+    const span = document.createElement('span');
+    span.className = 't-line';
+
+    if (item.cursor) {
+      span.innerHTML = `<span class="t-prompt">${item.prompt}</span><span class="t-cursor"></span>`;
+    } else if (item.key) {
+      span.innerHTML = `<span class="t-key">${item.key}</span><span class="t-val">${item.val}</span>`;
+    } else {
+      span.innerHTML = `<span class="t-prompt">${item.prompt}</span><span class="t-dim">${item.text}</span>`;
+    }
+
+    body.appendChild(span);
+    body.scrollTop = body.scrollHeight;
+    i++;
+    setTimeout(addLine, item.delay);
+  }
+
+  // Start after hero loads
+  setTimeout(addLine, 1200);
+}
+
+renderTerminal();
