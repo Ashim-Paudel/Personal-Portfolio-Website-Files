@@ -1,0 +1,155 @@
+/* =============================================
+   main.js — Ashim Paudel Portfolio
+   All interactive behaviour lives here.
+============================================= */
+
+'use strict';
+
+// =============================================
+// 1. NAVIGATION — hamburger toggle
+// =============================================
+const hamburger = document.getElementById('hamburger');
+const navLinks  = document.getElementById('navLinks');
+
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+// Close nav when a link is tapped (mobile)
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+// =============================================
+// 2. ACTIVE NAV HIGHLIGHT on scroll
+// =============================================
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a');
+
+function updateActiveNav() {
+  let current = '';
+  sections.forEach(section => {
+    if (window.scrollY >= section.offsetTop - 100) {
+      current = section.id;
+    }
+  });
+  navAnchors.forEach(a => {
+    a.classList.remove('active');
+    if (a.getAttribute('href') === `#${current}`) {
+      a.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+
+// =============================================
+// 3. SCROLL REVEAL
+// =============================================
+const revealObserver = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  },
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// =============================================
+// 4. SKILL RINGS — build + animate on scroll
+// =============================================
+const SKILLS = [
+  { label: 'Python',   pct: 88, color: '#ff3c5f' },
+  { label: 'AutoCAD',  pct: 85, color: '#ffcc00' },
+  { label: 'C',        pct: 82, color: '#00e5ff' },
+  { label: 'HTML/CSS', pct: 80, color: '#7c3aed' },
+  { label: 'LaTeX',    pct: 92, color: '#ff3c5f' },
+  { label: 'WP / JS',  pct: 70, color: '#ffcc00' },
+];
+
+const CIRCUMFERENCE = 2 * Math.PI * 36; // r = 36 → ≈ 226.19
+
+function buildSkillRings() {
+  const container = document.getElementById('skillRings');
+  if (!container) return;
+
+  SKILLS.forEach(skill => {
+    const offset = CIRCUMFERENCE - (skill.pct / 100) * CIRCUMFERENCE;
+
+    // Build DOM
+    const item = document.createElement('div');
+    item.className = 'ring-item reveal';
+
+    item.innerHTML = `
+      <div class="ring-wrap">
+        <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+          <circle class="ring-bg" cx="40" cy="40" r="36"/>
+          <circle
+            class="ring-fill"
+            cx="40" cy="40" r="36"
+            stroke="${skill.color}"
+            data-offset="${offset}"
+          />
+        </svg>
+        <div class="ring-percent">${skill.pct}%</div>
+      </div>
+      <div class="ring-label">${skill.label}</div>
+    `;
+
+    container.appendChild(item);
+
+    // Observe for reveal
+    revealObserver.observe(item);
+  });
+
+  // Separate observer that triggers the fill animation
+  const ringAnimObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const fill = entry.target.querySelector('.ring-fill');
+          if (fill) {
+            const targetOffset = parseFloat(fill.getAttribute('data-offset'));
+            setTimeout(() => {
+              fill.style.strokeDashoffset = targetOffset;
+            }, 200);
+          }
+          ringAnimObserver.unobserve(entry.target); // animate once
+        }
+      });
+    },
+    { threshold: 0.4 }
+  );
+
+  container.querySelectorAll('.ring-item').forEach(el => ringAnimObserver.observe(el));
+}
+
+buildSkillRings();
+
+// =============================================
+// 5. PROJECT FILTER
+// =============================================
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards  = document.querySelectorAll('.project-card');
+
+filterButtons.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const filter = btn.getAttribute('data-filter');
+
+    // Update active button
+    filterButtons.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Show / hide cards
+    projectCards.forEach(card => {
+      const cats = card.getAttribute('data-cat') || '';
+      const visible = filter === 'all' || cats.includes(filter);
+      card.setAttribute('data-hidden', visible ? 'false' : 'true');
+      card.style.display = visible ? '' : 'none';
+    });
+  });
+});
