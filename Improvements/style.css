@@ -7,35 +7,19 @@
   --bg3:       #18181f;
   --surface:   #1e1e28;
   --border:    rgba(255, 255, 255, 0.08);
-  --accent1:   #ff3c5f;   /* hot red-pink  */
-  --accent2:   #ffcc00;   /* electric yellow */
-  --accent3:   #00e5ff;   /* cyan           */
-  --accent4:   #7c3aed;   /* violet         */
+  --accent1: #2dd4bf;  /* teal primary */
+  --accent2: #38bdf8;  /* sky blue secondary */
+  --accent3: #818cf8;  /* soft violet */
+  --accent4: #34d399;  /* emerald */
   --text:      #f0f0f5;
   --text-dim:  #8888aa;
   --text-mute: #44445a;
   --radius:    12px;
   --radius-lg: 20px;
-  --font-head: 'Syne', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
-  --font-mono: 'Space Mono', monospace;
+  --font-head: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
 }
-
-  :root {
-    --bg:        #050508;
-    --bg2:       #0d0d14;
-    --surface:   #161620;
-    --border:    rgba(255, 255, 255, 0.05);
-    --accent1:   #00e5ff;   
-    --accent2:   #38bdf8;   
-    --accent3:   #a78bfa;   
-    --text:      #f8fafc;
-    --text-dim:  #94a3b8;
-
-    --font-head: 'Inter', sans-serif;
-    --font-body: 'Inter', sans-serif;
-    --font-mono: 'JetBrains Mono', monospace;
-  }
 
 /* =============================================
    RESET & BASE
@@ -286,13 +270,13 @@ section {
 }
 .hero-blob-1 {
   width: 500px; height: 500px;
-  background: radial-gradient(circle, rgba(255, 60, 95, 0.18), transparent 70%);
+  background: radial-gradient(circle, rgba(45,212,191,0.15), transparent 70%);
   top: -100px; right: -100px;
   animation-delay: 0s;
 }
 .hero-blob-2 {
   width: 400px; height: 400px;
-  background: radial-gradient(circle, rgba(0, 229, 255, 0.12), transparent 70%);
+  background: radial-gradient(circle, rgba(56,189,248,0.10), transparent 70%);
   bottom: -80px; left: 10%;
   animation-delay: -4s;
 }
